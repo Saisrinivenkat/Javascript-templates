@@ -1,0 +1,95 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+:root {
+  --accent-color: orangered;
+  --background-color: white;
+  --text-color: black;
+  --btn-text: var(--background-color);
+  --transition-time: 1s;
+}
+body.dark {
+  --accent-color: yellow;
+  --background-color: black;
+  --text-color: white;
+  --btn-text: var(--background-color);
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  transition: background-color var(--transition-time);
+  background-color: var(--background-color);
+}
+
+.title {
+  margin: 0;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+.theme-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.4rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.3rem;
+  font-family: monospace;
+  color: var(--background-color);
+  background-color: var(--accent-color);
+  border: 0;
+  letter-spacing: 0.1rem;
+  transform: var(--accent-color);
+  transition: var(--transition-time);
+}
+.theme-btn:hover,
+.theme-btn:focus {
+  transform: scale(1.1);
+}
+.theme-btn svg {
+  margin: 0 0.5rem;
+}
+
+.icons {
+  --rotate: 0;
+  position: absolute;
+  top: 0;
+  height: 200vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(calc(var(--rotate) * 1deg));
+  transition: transform var(--transition-time);
+}
+
+.sun,
+.moon {
+  position: absolute;
+  fill: var(--accent-color);
+  height: 2rem;
+  width: 2rem;
+  transition: fill, opacity, var(--transition-time);
+}
+
+.sun {
+  top: 5%;
+  opacity: 1;
+}
+.dark .sun {
+  opacity: 0;
+}
+.moon {
+  bottom: 5%;
+  opacity: 0;
+  transform: rotate(180deg);
+}
+.dark .moon {
+  opacity: 1;
+}
