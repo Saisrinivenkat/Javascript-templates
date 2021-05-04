@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Multi Tabs</title>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <ul class="bar">
+        <li data-target="#home" class="active">Home</li>
+        <li data-target="#docum">Documentation</li>
+        <li data-target="#about">About</li>
+      </ul>
+        </nav>
+        <div id="home" data-cont class="active">
+      <h1>Welcome to Home!</h1>
+      <h4>The info about this is Nothing just a static page</h4>
+        </div>
+        <div id="about" data-cont>
+      <h1>Welcome to About Page!</h1>
+      <h4>Let me tell you about this page</h4>
+        </div>
+        <div id="docum" data-cont>
+      <h1>Welcome to Documentation!</h1>
+      <h4>You should know about this page before using</h4>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+}
+
+body {
+  --font-size-header: 1.5rem;
+  --bgcolor: yellowgreen;
+  --font-color: black;
+  height: 100vh;
+  margin: 0;
+}
+.wrapper {
+  width: 80vw;
+  margin: auto;
+  position: relative;
+  /* border-left: 2px solid #ccc; */
+}
+
+.bar {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-header);
+  padding: 0;
+  color: var(--font-color);
+  background-color: #ccc;
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  /* border-radius: 0.3rem; */
+}
+.bar li {
+  padding: 1rem 2rem;
+}
+.bar li:hover {
+  background-color: #aa0;
+}
+
+[data-cont] {
+  display: none;
+}
+.bar .active {
+  background-color: #aa0;
+}
+
+.active[data-cont] {
+  display: block;
+}
